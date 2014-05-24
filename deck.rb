@@ -1,4 +1,15 @@
 ARGV.map!{|c| c.downcase.strip}
+class Card
+  def initialize(card, suit)
+    @suit = suit
+    @card = card
+  end
+
+  def to_s
+    @card + '-' + @suit
+  end
+end
+
 class Deck
   def initialize
     self.new
@@ -10,7 +21,7 @@ class Deck
     @newDeck = []
       @cards.each do |card|
       @suits.each do  |suit|
-        @newDeck.push(card + '-' + suit)
+        @newDeck.push(Card.new(card, suit))
       end
     end
   end
