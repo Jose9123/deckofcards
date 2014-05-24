@@ -31,7 +31,7 @@ class Deck
     puts @newDeck.sample
   end
 
-  def getCount
+  def getcount
     puts @newDeck.count
   end
 end
@@ -45,6 +45,9 @@ elsif ARGV.include?('pickcard')
   deck.pickcard
 elsif ARGV.include?('shuffle')
   deck.shuffle
-else  ARGV.include?('count')
-  deck.getCount
+elsif ARGV.include?('count')
+  deck.getcount
+else  
+  puts "\nUsage: ruby deck.rd [shuffle | pickcard | getcount]\n\n"
+  exit
 end
