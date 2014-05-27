@@ -1,3 +1,11 @@
+##############################################
+##   Jose A. Montilla
+##   5/23/2014
+##   deck_of_card.rd
+##   Description: Deck of Cards modeled in Ruby.
+##
+##   Usage: ruby deck.rd [shuffle | pickcard | getcount]
+##############################################
 ARGV.map!{|c| c.downcase.strip}
 class Card
   def initialize(card, suit)
