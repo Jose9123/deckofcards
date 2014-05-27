@@ -4,7 +4,7 @@
 ##   deck_of_card.rd
 ##   Description: Deck of Cards modeled in Ruby.
 ##
-##   Usage: ruby deck.rd [shuffle | pickcard | getcount]
+##   Usage: ruby deck.rd [shuffle | pickcard | count]
 ##############################################
 ARGV.map!{|c| c.downcase.strip}
 class Card
@@ -67,6 +67,6 @@ elsif ARGV.include?('shuffle')
 elsif ARGV.include?('count')
   deck.getcount
 else  
-  puts "\nUsage: ruby deck.rd [shuffle | pickcard | getcount]\n\n"
+  puts "\nUsage: ruby deck.rd [shuffle | pickcard | count]\n\n"
   exit
 end
